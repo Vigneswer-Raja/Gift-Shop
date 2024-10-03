@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <title>Login In/Sign Up</title>
+    <link type="text/css" rel="stylesheet" href="login.css">
+    <!--<script src="https://kit.fontawesome.com/5471644867.js" crossorigin="anonymous"></script>-->
+    <script type="module" src="firebaseauth.js"></script>
+
+</head>
+<body>
+    <section class="imp">
+        <section>
+            <div class="login show" id="signIn">
+                <div class="textbox slide-left2">
+                    <div class="head">
+                        <h1>Sign In</h1>
+                        <ul>
+                            <li><i class="fab fa-facebook-f" style="cursor: pointer;"></i></li>
+                            <li><i class="fab fa-google-plus-g" style="cursor: pointer;"></i></li>
+                            <li><i class="fab fa-linkedin-in" style="cursor: pointer;"></i></li>
+                        </ul>
+                        <h3 style="cursor: pointer;">or use your E-mail ID</h3>
+                    </div>
+                    <form action="">
+                        <input type="text" placeholder="EMAIL" required>
+                        <input type="password" placeholder="PASSWORD" required>
+                        <button id="b"><a href="#" style="cursor: pointer;">Forgot password?</a></button>
+                        <button type="submit" class="sign_in_btn"><a href="HomePage.html" style="color: white;">SIGN IN</a></button>
+                    </form>
+                </div>
+            </div>
+            <div class="sec show" id="signup">
+                <div class="textbox slide-left">
+                    <h1>Not a member?</h1>
+                    <p>Sign up and start shopping.</p>
+                    <button id="signUpButton" style="cursor: pointer;" class="prompt_sign_up">SIGN UP</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="sec hide" id="signIn">
+                <div class="textbox slide-left">
+                    <h1>Already a member?</h1>
+                    <p>Login to keep shopping.</p>
+                    <button id="signInButton" style="cursor: pointer;" class="prompt_sign_in">SIGN IN</button>
+                </div>
+            </div>
+            <div class="login hide" id="signup">
+                <div class="textbox slide-right">
+                    <div class="head">
+                        <h1>Create Account</h1>
+                        <ul>
+                            <li><i class="fab fa-facebook-f" style="cursor: pointer;"></i></li>
+                            <li><i class="fab fa-google-plus-g" style="cursor: pointer;"></i></li>
+                            <li><i class="fab fa-linkedin-in" style="cursor: pointer;"></i></li>
+                        </ul>
+                        <h3 style="cursor: pointer;">or use your E-mail ID</h3>
+                    </div>
+                    <form action="">
+                        <input type="text" placeholder="NAME" required><br>
+                        <input type="text" placeholder="EMAIL" required><br>
+                        <input type="password" placeholder="PASSWORD" required><br>
+                        <input type="text" placeholder="PHONE NO. (optional)"><br>
+                        <button type="submit" style="cursor: pointer;" class="sign_up_btn"><a href="login.html" style="color: white; text-decoration: none;">SIGN UP</a></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="login.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

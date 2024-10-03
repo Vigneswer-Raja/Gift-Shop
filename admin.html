@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css"> <!-- Add your CSS styles here -->
+</head>
+<body>
+    <div id="adminDashboard">
+        <h1>Admin</h1>
+        
+        <!-- CRUD Operations Section -->
+        <section id="crudOperations">
+            <h2>CRUD</h2>
+            <button onclick="window.location.href='crud.html'">Inventory</button>
+        </section>
+
+        <!-- Customer Credit Limits Section -->
+        <section id="customerCreditLimits">
+            <h2>Customer Credit Limits</h2>
+            <button onclick="window.location.href='credit_limits.html'">Edit Customer Credit Limits</button>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports">
+            <h2>Reports</h2>
+            <button onclick="window.location.href='reports.html'">Customer Reports</button>
+            <button onclick="window.location.href='inventory_report.html'">Inventory Reports</button>
+            <button onclick="window.location.href='sales_report.html'">Sales Reports</button>
+            <button >  <a href="index.html" style='color: aliceblue'>Logout 
+            </button>  </a>   
+        </section>
+    </div>
+    <script src="admin.js"></script> <!-- Your JS file -->
+</body>
+</html>

@@ -1,0 +1,634 @@
+<DOCTYPE html>
+
+<html>
+
+    <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--==Title==================================-->
+    <title>
+
+        Gift Shop
+
+    </title>
+
+    <!--==Stylesheet=============================-->
+    <link rel="stylesheet" type="text/css" href="HomePage.css">
+
+    <!--==Fav-icon===============================-->
+    <link rel="shortcut icon" href="images/fav-icon.png"/>
+
+    <!--==Using-Font-Awesome=====================-->
+    <script src="https://kit.fontawesome.com/5471644867.js" crossorigin="anonymous"></script>
+
+    <script src = 'HomePage.js' defer></script>
+    <script src="homee.js" defer></script>
+    <!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+
+<!-- Add additional Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-storage.js"></script>
+
+	    
+  <!-- <link rel="shortcut icon" type="image/jpg" href="C:\Users\hp\Desktop\College\First Semester\Introduction To Web Technologies\Notepad ++ Files\Project\favicon.ico"/>-->
+
+    </head>
+
+    <body>
+
+        <!--==Navigation================================-->
+        <nav class="navigation">
+
+            <!--logo-------->
+            <a href="#" class="logo">
+
+                <span>Gift</span>shop
+
+            </a>
+
+            <!--menu-btn---->
+            <input type="checkbox" class="menu-btn" id="menu-btn">
+
+            <label for="menu-btn" class="menu-icon">
+
+                <span class="nav-icon"></span>
+
+            </label>
+
+            <!--menu-------->
+            <ul class="menu">
+
+                <li>
+                    <a href="HomePage.html" class="active">
+                        
+                        Home
+
+                    </a>
+                
+                </li>
+
+                <li>
+
+                    <a href="#category">
+
+                        Categories
+                    
+                    </a>
+                
+                </li>
+
+                <li>
+
+                    <a href="#popular-bundle-pack">
+                        
+                        Combos
+                    
+                    </a>
+                
+                </li>
+
+                <li>
+                    
+                    <a href="contact.html">
+                        
+                        Contact&nbsp;Us
+                    
+                    </a>
+                
+                </li>
+				
+				<li>
+                    
+                    <a href="feedback.html">
+                        
+                        Feedback
+                    
+                    </a>
+                
+                </li>
+				
+				<li>
+
+					<a href="aboutus.html">
+
+						About&nbsp;us
+
+					</a>
+
+                </li>                
+                <li>
+                    
+                    <a href="index.html">
+                        
+                        Logout
+                    
+                    </a>
+                
+                </li>
+
+				</ul>
+
+            <!--right-nav-(cart-like)-->
+            <div class="right-nav">
+
+
+                <!--cart----->
+                <a href="cart.html" class="cart">
+
+                    <i class="fas fa-shopping-cart"></i>
+
+                    <span>
+                        
+                        2
+                    
+                    </span>
+
+                </a>
+
+                <!--cart----->
+                <a href="Profile HTML.html" class="user-profile">
+
+                    <i class="fas fa-user"></i>
+
+                    <span>
+
+                        1
+
+                    </span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+        <!--nav-end--------------------->
+        <!--==Search-banner=======================================-->
+        <section id="search-banner">
+
+            <!--bg--------->
+            <img alt="bg" class="bg-1" src="https://i.imgur.com/h8pXo1s.png">
+
+            <img alt="bg" class="bg-1_rev" src="https://i.imgur.com/h8pXo1s.png">
+
+            <img alt="bg-2" class="bg-2" src="https://i.imgur.com/2smuQIz.png">
+
+            <!--text------->
+            <div class="search-banner-text">
+
+                <h1>
+                    
+                    Order Your Handmade gifts for your Special one
+                
+                </h1>
+
+                <strong>
+                    
+                    #Free Delivery all over India
+                
+                </strong>
+
+                <!--search-box------>
+                <form action="" class="Description">
+
+                    <!--icon---
+                    <i class="fas fa-search"></i>
+
+                    <!--input---
+                    <input type="text" class="search-input" placeholder="Search" name="search" size = "80px" required>
+
+                    <!--btn-----
+                    <input type="submit" class="search-btn" value="Search">-->
+                    <p> A gift shop is a retail establishment that specializes in selling a wide variety of products suitable for gift-giving.
+                         These shops offer items such as souvenirs, novelties, decor, clothing, jewelry, and toys, often catering to different occasions and themes 
+                         like birthdays, weddings, holidays, or special events.</p>
+
+                </form>
+
+                <br>
+
+                <h3>
+
+                    <a href = 'Best Deals HTML.html' style = 'color: #40aa54'>
+
+                        Click here to Know more about today's best deals
+
+                    </a>
+
+                </h3>
+
+            </div>
+
+        </section>
+
+        <!--search-banner-end--------------->
+
+        <h2 class = 'sale-heading'>
+
+            Diwali Sale is Live From
+
+        </h2>
+        <div class="countdown-container">
+            <stronger>
+                    
+                Countdown Begin!
+            
+            </stronger>
+
+            <div class="countdown-el days-c">
+                <p class="big-text" id="days">0</p>
+                <span>Days</span>
+            </div>
+            <div class="countdown-el hours-c">
+                <p class="big-text" id="hours">0</p>
+                <span>Hours</span>
+            </div>
+            <div class="countdown-el mins-c">
+                <p class="big-text" id="mins">0</p>
+                <span>Min</span>
+            </div>
+            <div class="countdown-el seconds-c">
+                <p class="big-text" id="seconds">0</p>
+                <span>Seconds</span>
+            </div>
+        </div>
+        <!--==category=========================================-->
+        <section id="category">
+            <!--heading---------------->
+            <h2>Category</h2>
+            <div class="category-box" data-category="Printed Clocks" data-cat-id="1">
+                <img alt="Printed Clocks" src="asserts/printed clock.jpg">
+                <span>Printed Clocks</span>
+            </div>
+            <div class="category-box" data-category="Coffee Mug" data-cat-id="2">
+                <img alt="Coffee Mug" src="asserts/Coffee Mug.jpg">
+                <span>Coffee Mug</span>
+            </div>
+            <div class="category-box" data-category="Smart Watches" data-cat-id="3">
+                <img alt="Smart Watches" src="asserts/smart watch.jpg">
+                <span>Smart Watches</span>
+            </div>
+            <div class="category-box" data-category="Photo Frame" data-cat-id="4">
+                <img alt="Photo Frame" src="asserts/photo frames.webp">
+                <span>Photo Frame</span>
+            </div>
+            <div class="category-box" data-category="Electronic Gadgets" data-cat-id="5">
+                <img alt="Electronic Gadgets" src="asserts/electronic gadget.avif">
+                <span>Electronic Gadgets</span>
+            </div>
+            
+        </section>
+        
+        
+        <section id="products">
+            <h2>Products</h2>
+            <div id="product-container" class="product-container">
+                <!-- Products will be displayed here -->
+            </div>
+        </section>
+        
+        
+        
+        <!--category-end----------------------------------->
+        <!--==Products====================================-->
+        <section id="popular-product">
+            <!--heading----------->
+            <div class="product-heading">
+                <h3>Fastest Selling products</h3>
+                <span>All</span>
+            </div>
+            <!--box-container------>
+            <div class="product-container">
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="Smart watch" src="asserts/smartwatch.jpg">
+                    <strong>Smart watch</strong>
+                    <span class="quantity">1</span>
+                    <span class="price">Rs. 1199</span>
+                    <!--cart-btn------->
+                    <a href="cart.html" class="cart-btn"  >
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="Photo frame" src="asserts/photos frame.webp">
+                    <strong>Photo Frame</strong>
+                    <span class="quantity">12*18 inch</span>
+                    <span class="price">Rs. 799</span>
+                    <!--cart-btn------->
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <!--like-btn------->
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="Magic Mug" src="asserts/magicmug.jpg">
+                    <strong>Magic Mug</strong>
+                    <span class="quantity">1 </span>
+                    <span class="price">Rs. 499</span>
+                    <!--cart-btn------->
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <!--like-btn------->
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="Chain" src="asserts/couples ring.webp">
+                    <strong>Couples Ring</strong>
+                    <span class="quantity">1 </span>
+                    <span class="price">Rs. 1699</span>
+                    <!--cart-btn------->
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="Resin art" src="asserts/resingart.webp">
+                    <strong>Resin Art</strong>
+                    <span class="quantity">1 </span>
+                    <span class="price">Rs. 1499</span>
+                    <!--cart-btn------->
+                    <a href="#" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <!--like-btn------->
+                    
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="Night Lamps" src="asserts/nightlamp.avif">
+                    <strong>Night Lamp</strong>
+                    <span class="quantity">1 </span>
+                    <span class="price">Rs. 399</span>
+                    <!--cart-btn------->
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+
+                </div>
+            </div>
+        </section>
+        <!--popular-product-end--------------------->
+        <!--Popular-bundle-pack===================================-->
+        <section id="popular-bundle-pack">
+            <!--heading-------------->
+            <div class="product-heading">
+                <h3>Combo Bundle Pack</h3>
+            </div>
+            <!--box-container------>
+            <div class="product-container">
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="pack1" src="asserts/combo1.jpg">
+                    <strong>Children's Combo</strong>
+                    <span class="quantity">Smartwatch, Photoframe</span>
+                    <span class="price">Rs. 1399</span>
+                    <!--cart-btn------->
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <!--like-btn------->
+                   
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="pack2" src="asserts/combo2.webp">
+                    <strong>Student's Combo</strong>
+                    <span class="quantity">Smartwatch, MobileCase,  Earbuds</span>
+
+                    <span class="price">Rs. 1499</span>
+                    <!--cart-btn------->
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <!--like-btn------->
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="pack3" src="asserts/combo3.jpg">
+                    <strong>Couples Combo</strong>
+                    <span class="quantity">Couples Ring, Photoframe</span>
+                    <span class="price">Rs. 1999</span>
+                    <!--cart-btn------->
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </a>
+                    
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="pack4" src="asserts/combo 4.webp">
+                    <strong>Birthday Pack</strong>
+                    <span class="quantity">Smartwatch, Earbuds</span>
+                    <span class="price">Rs. 1499</span>
+                    <!--cart-btn------->
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <!--like-btn------->
+                   
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="pack5" src="asserts/combo5.jfif">
+                    <strong>Wedding Pack</strong>
+                    <span class="quantity">Printed Clock, Coffee Mug</span>
+                    <span class="price">Rs. 1199</span>
+                    <!--cart-btn------->
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <!--like-btn------->
+                    
+                </div>
+                <!--box---------->
+                <div class="product-box">
+                    <img alt="pack6" src="asserts/combo6.jpg">
+                    <strong>House Ceremony</strong>
+                    <span class="quantity">Printed Clocks, Coffee Mug, Photoframe </span>
+
+                    <span class="price">Rs. 1499</span>
+                    <!--cart-btn------->
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </a>
+                    <!--like-btn------->
+
+                </div>
+            </div>
+        </section>
+        <!--popular-bundle-pack-end-------------------------------->
+        <!--==Clients===============================================-->
+        <section id="clients">
+            <!--heading---------------->
+            <div class="client-heading">
+                <h3>What Our Clients Say</h3>
+            </div>
+            <!--box-container---------->
+            <div class="client-box-container">
+                <!--box------------->
+                <div class="client-box">
+                    <!--==profile===-->
+                    <div class="client-profile">
+                        <!--img--->
+                        <img alt="client" src="asserts/John.jpg">
+                        <!--text-->
+                        <div class="profile-text">
+                            <strong>James</strong>
+                            <span>CEO</span>
+                        </div>
+                    </div>
+                    <!--==Rating======-->
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <!--==comments===-->
+                    <p>A very good shop for purchasing gifts for all events of life. Ranging from gift cards to vases to plants to showpieces. Some unique gifts you will always get over here that you won't have expected. If you don't get over here the gifts then also you can get from red moments just beside Archies Gallery.</Str></p>
+                </div>
+                <!--box------------->
+                <div class="client-box">
+                    <!--==profile===-->
+                    <div class="client-profile">
+                        <!--img--->
+                        <img alt="client" src="asserts/sameera.webp">
+                        <!--text-->
+                        <div class="profile-text">
+                            <strong>Sameera</strong>
+                            <span>Software Developer</span>
+                        </div>
+                    </div>
+                    <!--==Rating======-->
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <!--==comments===-->
+                    <p>I bought the gift of my loving hubby. He liked very much . It's amazing place for new creation and also for gift . If anyone purchase for gift family members, love ones go HARMONY.Excellent unique items.. one of the best gift shop .. very responsible staff & owner..</p>
+                </div>
+                <!--box------------->
+                <div class="client-box">
+                    <!--==profile===-->
+                    <div class="client-profile">
+                        <!--img--->
+                        <img alt="client" src="asserts/alex.jpg">
+                        <!--text-->
+                        <div class="profile-text">
+                            <strong>Alex</strong>
+                            <span>Marketer</span>
+                        </div>
+                    </div>
+                    <!--==Rating======-->
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <!--==comments===-->
+                    <p>It has a wide variety of products and accessories to choose from, as well as house decor and handicraft items made in India. This store is great for finding the perfect gift for any occasion.</p>
+                </div>
+            </div>
+        </section>
+        <!--client-section-end---------->
+        <!--==Partnre-logo================================-->
+        <section id="partner">
+            <!--heading------------>
+            <div class="partner-heading">
+                <h3>Our Trusted Partner</h3>
+            </div>
+            <!--logo-container----->
+            <div class="logo-container">
+                <img alt="logo" src="asserts/titan.png">
+                <img alt="logo" src="asserts/caratlane.avif">
+                <img alt="logo" src="asserts/apple.jfif">
+                <img alt="logo" src="asserts/fastrack.jfif">
+            </div>
+        </section>
+        <!--logo-section-end--------------------->
+        <!--==download-app====================================-->
+        <section id="download-app">
+            <!--img----------------------->
+            <div class="app-img">
+                <img alt="app" src="asserts/mob.jfif">
+            </div>
+            <!--text---------------------->
+            <div class="download-app-text">
+                <strong>Connect With us</strong>
+                <p>Gifts shopping made easier. Now, you don't need to open the website for placing orders. <b>Follow Gifts Shop</b> on Instagram to get the exciting discounts and offers from us to start shopping easily and faster. <br> HAPPY SHOPPING!</b></p>
+                <!--btns------->
+                <div class="download-btns">
+                    <a href="https://play.google.com/store"><img alt="" src="asserts/insta logo.png"></a>
+                    <a href="https://play.google.com/store"><img alt="" src="asserts/fb logo.png"></a>
+                </div>
+            </div>
+        </section>
+        <!--download-app-section-end------------------------->
+        <!--==Footer=============================================-->
+        <footer>
+            <div class="footer-container">
+                <!--logo-container------>
+                <div class="footer-logo">
+                    <a><span>Gifts</span>Shop</a>
+                    <!--social
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/?lang=en-in"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                    </div>-->
+                </div>
+                <!--links------------------------->
+            <div class="footer-links">
+                <strong>Product</strong>
+                <ul>
+                    <li><a href="#">Couples Ring</a></li>
+                    <li><a href="#">Coffee Mug</a></li>
+                    <li><a href="#">Printed MobileCase</a></li>
+                    <li><a href="#">Resin art</a></li>
+                    <li><a href="#">Customized Night Lamp</a></li>
+
+                </ul>
+            </div>
+            <!--links------------------------->
+            <div class="footer-links">
+                <strong>Category</strong>
+                <ul>
+                    <li><a href="#">Printed Clock</a></li>
+                    <li><a href="#">Coffee Mug</a></li>
+                    <li><a href="#">Photo Frame</a></li>
+                    <li><a href="#">Smartwatch</a></li>
+                    <li><a href="#">Electronic Gadgets</a></li>
+                </ul>
+            </div>
+            <!--links-------------------------->
+            <div class="footer-links">
+                <strong>Contact</strong>
+                <ul>
+                    <li><a href="#">Phone : +91 9873828932</a></li>
+                    <li><a href="#">Email : giftsshop2020@gmail.com</a></li>
+                    <li><a href="#">HAPPY SHOPPING!</a></li>
+                </ul>
+				<br><p style="color: aliceblue;">Copyright ©2024 | All Rights Reserved</p>
+            </div>
+            </div>
+        </footer>
+    </body>
+</html>

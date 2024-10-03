@@ -1,0 +1,242 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+    background-image: url('asserts/bggg.webp'); /* Elegant gift image background */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Floating gifts animation */
+@keyframes floatGifts {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-150vh);
+        opacity: 0;
+    }
+}
+
+.gift {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+   
+    animation: floatGifts 10s linear infinite;
+}
+
+.gift:nth-child(1) {
+    left: 10%;
+    animation-duration: 12s;
+    animation-delay: 1s;
+    background-image: url('asserts/caratlane.avif'); /* Gift 1 */
+}
+
+.gift:nth-child(2) {
+    left: 40%;
+    animation-duration: 10s;
+    animation-delay: 3s;
+    background-image: url('asserts/bggg.webp'); /* Gift 2 */
+}
+
+.gift:nth-child(3) {
+    left: 70%;
+    animation-duration: 14s;
+    animation-delay: 2s;
+    background-image: url('asserts/alex.jpg'); /* Gift 3 */
+}
+
+/* Container */
+.container {
+    background-color: rgba(87, 100, 155, 0.842);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+
+    max-width: 400px;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
+}
+
+h1.form-title {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #999;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 10px 15px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #34d399;
+    box-shadow: 0 4px 8px rgba(52, 211, 153, 0.3);
+}
+
+.input-group label {
+    position: absolute;
+    top: 0;
+    left: 40px;
+    font-size: 12px;
+    color: #999;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -18px;
+    font-size: 10px;
+    color: #34d399;
+}
+
+.btn {
+    background-color: #34d399;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2abf8c;
+}
+
+.recover {
+    text-align: right;
+    margin-top: -10px;
+}
+
+.recover a {
+    color: #34d399;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.recover a:hover {
+    text-decoration: underline;
+}
+
+.or {
+    text-align: center;
+    font-size: 14px;
+    margin: 20px 0;
+    color: #666;
+    position: relative;
+}
+
+.or:before,
+.or:after {
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    top: 50%;
+}
+
+.or:before {
+    left: 0;
+}
+
+.or:after {
+    right: 0;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icons i {
+    font-size: 24px;
+    color: #888;
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    color: #34d399;
+    transform: scale(1.1);
+}
+
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links button {
+    background: none;
+    border: none;
+    color: #34d399;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.links button:hover {
+    color: #2abf8c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .input-group input {
+        padding: 12px 10px 12px 35px;
+    }
+
+    .input-group label {
+        left: 35px;
+    }
+}
